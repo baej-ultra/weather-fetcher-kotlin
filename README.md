@@ -5,19 +5,21 @@ Simple weather app
 ## How to build and run
 **Requires openweathermap.org API key**. Can be passed either as an env variable or slapped directly into code
 <br><br>
-Build with Gradle
-<br>
+### Build with Gradle
 `gradlew shadowJar` or `gradlew.bat shadowJar`. Builds to `./build/libs/`
 <br><br>
-Run:
+### Run:
+bash
 ```bash
 WEATHER_API_KEY={api key} java -jar first-kotlin-1.0-all.jar -zip {zip code} -country {ISO country code}
 ```
 
+cmd
 ```cmd
 set WEATHER_API_KEY={api key} && java -jar first-kotlin-1.0-all.jar -zip {zip code} -country {ISO country code}
 ```
 
+powershell
 ```powershell
 $env:WEATHER_API_KEY="{api key}"; java -jar first-kotlin-1.0-all.jar -zip {zip code} -country {ISO country code}
 ```
