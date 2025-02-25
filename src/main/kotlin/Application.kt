@@ -11,6 +11,7 @@ import kotlinx.serialization.json.Json
 import org.apache.commons.cli.*
 import java.util.*
 
+// OpenWeather API key required here
 val apiKey = System.getenv("WEATHER_API_KEY")
 
 fun main(args: Array<String>) = runBlocking {
@@ -28,9 +29,9 @@ fun main(args: Array<String>) = runBlocking {
         Weather in ${geoCode.name}
         ${weatherData.weather[0].main} - ${weatherData.weather[0].description}
         Temperature: ${weatherData.main.temp} C
-        Feels like: ${weatherData.main.feels_like}
-        Humidity: ${weatherData.main.humidity}
-        Pressure: ${weatherData.main.pressure}        
+        Feels like: ${weatherData.main.feels_like} C
+        Humidity: ${weatherData.main.humidity} %
+        Pressure: ${weatherData.main.pressure} hPa      
     """.trimIndent()
     )
 }

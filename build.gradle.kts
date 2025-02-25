@@ -4,6 +4,7 @@ plugins {
     kotlin("jvm") version "2.1.0"
     kotlin("plugin.serialization") version "2.1.0"
     application
+    id("com.gradleup.shadow") version "8.3.6"
 }
 
 application {
@@ -11,7 +12,7 @@ application {
 }
 
 group = "org.baej"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -37,6 +38,7 @@ tasks.jar {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(17)
 }
